@@ -1,6 +1,6 @@
 //
-var firstPlayer = "";
-var secondPlayer ="";
+var playerOne = "";
+var playerTwo = "";
 
 var throwDice = function() {
   return Math.floor(6 * Math.random()) + 1;
@@ -8,29 +8,29 @@ var throwDice = function() {
 
 function Player(turn) {
   this.roll = 0;
-  this.trialPoints = 0;
+  this.tempPoints = 0;
   this.totalPoints = 0;
   this.turn = turn;
-  this.player;
+  this.playerNumber;
 }
 
 // checking for 1
 Player.prototype.rollone = function() {
   if (this.roll === 1) {
-    this.trialPoints = 0;
+    this.tempPoints = 0;
     alert("Sorry " + this.player + ", you rolled a 1! Your turn is over!")
     // this.changeturn();
   } else {
-    this.trialPoints += this.roll;
+    this.tempPoints += this.roll;
   }
 }
 
 // hold
 Player.prototype.hold = function() {
   this.totalPoints += this.trialPoints;
-  this.trialPoints = 0;
+  this.tempPoints = 0;
   // this.changeturn();
-  alert(this.player + ", your turn is over, pass the mouse!");
+  alert(this.playerNumber + ", your turn is over, pass the mouse!");
 }
 
 // // changing turn
@@ -43,30 +43,30 @@ Player.prototype.hold = function() {
 // }
 // check for 100
 Player.prototype.winnerCheck = function() {
-  if (this.trialPoints >= 100) {
-    alert(this.player + " You are the winner!");
+  if (this.totalPoints >= 100) {
+    alert(this.playerNumber + " You are the winner!");
   }
 }
 
 Player.prototype.newGame = function() {
   //debugger;
   this.roll = 0;
-  this.trialPoints = 0;
+  this.tempPoints = 0;
   this.totalPoints = 0;
-  this.player = "";
+  this.playerNumber = "";
 }
 
 var clearValues = function() {
-  $(".firstPlayer").val("");
-  $(".secondPlayer").val("");
+  $("#firstPlayer").val("");
+  $("#secondPlayer").val("");
 }
 
 // User Interface
 $(document).ready(function() {
 
   $("button#start").click(function(event) {
-    First Player = new Player(true);
-    Second Player = new Player(false);
+    playerOne = new Player(true);
+    playerTwo = new Player(false);
     $(".playing").show();
     $(".begin").hide();
 
@@ -76,53 +76,53 @@ $(document).ready(function() {
     var secondPlayer = $(".secondPlayer").val();
     $("#secondPlayer").text(secondPlayer);
 
-    First Player.firstPlayer = firstPlayer;
-    Second Player.secondPlayer = firstPlayer;
+     PlayerOne.firstPlayer = firstPlayer;
+    PlayerTwo.secondPlayer = firstPlayer;
 
   });
   $("button#new-game").click(function(event) {
     $(".player-console").hide();
     clearValues();
-    player1.newGame();
-    player2.newGame();
-    $("#round-total-1").empty();
-    $("#total-score-1").empty();
-    $("#die-roll-1").empty();
-    $("#round-total-2").empty();
-    $("#total-score-2").empty();
-    $("#die-roll-2").empty();
+     playerOne.newGame();
+     playerTwo.newGame();
+    $("#timesTotalOne").empty();
+    $("#totalPointsOne").empty();
+    $("#dieRollOne").empty();
+    $("#timesTotalTwo").empty();
+    $("#totalPointsTwo").empty();
+    $("#dieRollTwo").empty();
 
-    $(".start-menu").show();
+    $(".begin").show();
   });
 
-  $("button#player1-roll").click(function(event) {
-    player1.roll = throwdice();
-    $("#die-roll-1").text(player1.roll);
-    player1.rollone();
-    $("#round-total-1").text(player1.tempscore);
+  $("button#playerOne-roll").click(function(event) {
+    playerOne.roll = throwdice();
+    $("#firstPlayerRoll").text(firstPlayer.roll);
+    playerOne.rollone();
+    $("#timesTotalOne").text(firstPlayer.trialPoints);
   });
 
-  $("button#player2-roll").click(function(event) {
-    player2.roll = throwdice();
-    $("#die-roll-2").text(player2.roll);
-    player2.rollone();
-    $("#round-total-2").text(player2.tempscore);
+  $("button#secondPlayer").click(function(event) {
+    playerTwo.roll = throwdice();
+    $("#secondPlayerRoll").text(secondPlayer.roll);
+    playerTwo.rollone();
+    $("#timesTotalTwo").text(secondPlayer.trialPoints);
   });
 
-  $("button#player1-hold").click(function(event) {
-    player1.hold();
-    $("#total-score-1").text(player1.totalscore);
-    $("#round-total-1").empty();
-    $("#die-roll-1").empty();
-    player1.winnerCheck();
+  $("button#firstPlayerHold").click(function(event) {
+    playerOne.hold();
+    $("#totalPointsOne").text(player1.totalscore);
+    $("#timesTotalOne").empty();
+    $("#diceRollTwo").empty();
+    playerOne.winnerCheck();
   });
 
   $("button#player2-hold").click(function(event) {
-    player2.hold();
-    $("#total-score-2").text(player2.totalscore);
-    $("#round-total-2").empty();
-    $("#die-roll-2").empty();
-    player2.winnerCheck();
+    playerTwo.hold();
+    $("#totalPointsOne").text(player2.totalscore);
+    $("#timesTotalTwo").empty();
+    $("#timesRollTwo").empty();
+    playerTwo.winnerCheck();
   });
 
 });
