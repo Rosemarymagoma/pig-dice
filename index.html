@@ -8,63 +8,62 @@
     <script src="js/scripts.js"></script>
   </head>
   <body>
-    <div class="container">
-
+      <ul class="navbar fadeInDown animated">
+        <li class="li"><a href="index.html" class="link">HOME</a></li>
+        <li class="li"><a href="" class="link">SOCIAL</a></li>
+        <li class="li"><a data-toggle="modal" href="#myModal">ABOUT</a></li>
+        <li class="li"><a href="" class="link">CONTACT US</a></li>
+      </ul>
+      <div class="start-menu container">
+      <div class="container">
         <h1><strong>PIG DICE</strong></h1><br>
-        <h4>First player name</h4>
-        <div class="form-group">
+          <img src="" alt="">
+          <h4>First player name</h4>
+          <form id="firstPlayer">
+          <div class="form-group">
           <div class="first-player-name">
             <label for="first-player-name"></label>
             <input id="firstPlayer" name="form-control" type="text">
           </div>
         </div>
+        </form>
         <h4>Second player name</h4>
+        <form class="" action="index.html" method="post">
+
         <div class="form-group">
           <div class="second-player-name">
             <label for="second-player-name"></label>
             <input id="secondPlayer" name="form-control" type="text">
           </div>
-        </div>
-        <div class="played">
-          <button class="btn btn-info" name="button">play</button>
-        </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div id="playerOne">
-              <div class="form-group">
-                <div class="player-name" id="nameOne"><h3>Player1</h3></div><br>
-                <label for="totalScore">score</label>
-                <input id="totalScore" class="form-control" value="14"><br><br>
-                <button class="btn btn-success" name="button">Current 0</button>
-                <button class="btn btn-warning" name="button">Roll Dice</button>
-                <button class="btn btn-danger" name="button">Hold</button>
-              </div>
-            </div>
-          </div><br><br>
 
-            <div class="col-md-4">
-              <div id="playerTwo">
-              <div class="form-group">
-                <div class="player-name" id="nameOne"><h3>Player2</h3></div>
-                <label for="totalScore">score</label>
-                <input id="totalScore" class="form-control" value="25"><br><br>
-                <button class="btn btn-success" name="button">Current0</button>
-                <button class="btn btn-warning" name="button">Roll Dice</button>
-                <button class="btn btn-danger" name="button">Hold</button>
-            </div>
+      </form>
+        <button id="button" class="btn btn-warning">Start</button>
+      </div>
+        <div class="player-console container">
+      <button id="new-game" class="btn btn-warning">NEW GAME</button>
+      <div class="row">
+        <div class="col-md-6">
+          <h2>First Player: <span id = "player1Name"><span></h2>
+          <button id="firstPlayer-roll" class="btn btn-success">Roll</button>
+          <button id="firstPlayer-hold" class="btn btn-success">Hold</button>
+          <h2>Dice Roll: <span id="die-roll-1"></span></h2>
+          <p>Times Total: <span id="times-total-1"></span></p>
+          <p>Total Points: <span id="total-points-1"></span></p>
+        </div>
+
+        <div class="col-md-6">
+          <h2>Second Player: <span id = "player2Name"><span></h2>
+            <button id="player2-roll" class="btn-info btn">Roll</button>
+            <button id="player2-hold" class="btn-info btn">Hold</button>
+            <h2>Dice Roll: <span id="die-roll-2"></span></h2>
+            <p>Times Total: <span id="times-total-2"></span></p>
+            <p>Total Points: <span id="total-points-2"></span></p>
           </div>
         </div>
-        </div>
-        <div id="twoButtons">
-
       </div>
 
-
-
-
-
-      </div>
-
+      <div class="footer">
+        <p>Copywrights 2018: Magoma</p>
     </div>
 
   </body>
