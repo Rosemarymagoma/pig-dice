@@ -5,7 +5,7 @@ h1{
   background-color: lavender;
 }
 .container {
-  background-color: thistle;
+  background-color: sandybrown;
   col
 }
 .played{
@@ -19,4 +19,7 @@ h1{
 }
 #twoButtons{
   text-align: center;
+}
+.player-console{
+  display: none;
 }

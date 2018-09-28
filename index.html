@@ -1,64 +1,89 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Pig dice</title>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-    <link href="css/styles.css" rel="stylesheet" type="text/css">
-    <script src="js/jquery-3.3.1.js"></script>
-    <script src="js/scripts.js"></script>
-  </head>
-  <body>
+<!DOCTYPE
+<html lang="en" dir="ltr">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+<link href="css/styles.css" rel="stylesheet" type="text/css">
+<script src="js/jquery-3.3.1.js"></script>
+<script src="js/scripts.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Acme|Arima+Madurai:700|Francois+One|Oleo+Script:700|Rasa:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Acme|Arima+Madurai:700|Emblema+One|Francois+One|Oleo+Script:700|Rasa:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Acme|Arima+Madurai:700|Baloo+Thambi|Emblema+One|Francois+One|Oleo+Script:700|Rasa:300" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Acme|Arima+Madurai:700|Baloo+Thambi|Emblema+One|Francois+One|Nova+Slim|Oleo+Script:700|Rasa:300" rel="stylesheet">
 
-      <div class="begin container">
-      <div class="container">
-        <h1><strong>PIG DICE</strong></h1><br>
-          <img src="" alt="">
-          <h4>First player name</h4>
-          <form id="firstPlayer">
-          <div class="form-group">
-          <div class="first-player-name">
-            <label for="first-player-name"></label>
-            <input id="firstPlayer" name="form-control" type="text">
+<title>pig-dice</title>
+
+</head>
+
+<body>
+  <div class="container">
+    <div class="container-fluid">
+      <div class="menutop" id="rules">
+        <div class="menutop-content">
+          <button id="button" name="button">Rules</button>
+          <div class="rule">
+            <h4>Rules/ How To Play</h4>
+            <p>* Enter the names of the players and submit.</p>
+            <p>* Roll the dice as many times as you want to but do so at your own risk. If you roll a 1,then no points are accumulated in that particular round and your turn is over</p>
+            <p>* If you hold before rolling a 1,the points accumulated within that round are tallied and added to your score.</p>
+            <p>* Reach 100 points before your opponent and be declared the winner.</p>
           </div>
         </div>
-      </form><br>
-        <h4>Second player name</h4>
-        <form class="form-group">
+      </div>
+    </div>
+    di
+    <div class="row">
+      <div class="col-sm-12 title">
+        <h1>Pig Dice Game</h1>
+      </div>
+    </div>
+    <div class="container" id="player-names-container">
+      <form id="playerinfo">
         <div class="form-group">
-          <div class="second-player-name">
-            <label for="second-player-name"></label>
-            <input id="secondPlayer" name="form-control" type="text">
-          </div>
-
-      </form><br><br>
-        <button id="button" class="btn btn-info">Start</button>
-      </div><br>
-        <div class="playing container">
-      <button id="new-game" class="btn btn-success">NEW GAME</button>
-      <div class="row">
-        <div class="col-md-6">
-          <h2>First Player: <span id = "firstPlayer"><span></h2><br>
-          <button id="firstPlayerRoll" class="btn btn-info">Roll</button>
-          <button id="firstPlayerHold" class="btn btn-success">Hold</button><br>
-          <h2>Dice Roll: <span id="dieRollOne"></span></h2><br>
-          <p>Times Total: <span id="timesRollOne"></span></p><br>
-          <p>Total Points: <span id="totalPointsOne"></span></p><br>
-        </div><br>
-
-        <div class="col-md-6">
-          <h2>Second Player: <span id = "secondPlayer"><span></h2><br>
-            <button id="secondPlayerRoll" class="btn btn-info">Roll</button>
-            <button id="secondPlayerHold" class="btn btn-success">Hold</button><br>
-            <h2>Dice Roll: <span id="dieRollTwo"></span></h2><br>
-            <p>Times Total: <span id="timesTotalTwo"></span></p><br>
-            <p>Total Points: <span id="totalPointsTwo"></span></p><br>
-          </div>
+          <label for="player-1">First Player Name</label>
+          <input type="text" id="player1Name" class="form-control player-1">
         </div>
-      </div><br><br><br>
-
-      <div class="footer">
-        <p>Copywrights 2018: Magoma</p>
+        <div class="form-group">
+          <label for="player-2">Second Player Name</label>
+          <input type="text" id="player2Name" class="form-control player-2">
+        </div>
+        <button type="button" id="start-game-button" name="button">Start Game</button>
+      </form>
     </div>
 
-  </body>
+    <!-- game container -->
+
+    <div class="container" id="game-container">
+      <div class="row">
+        <div class="col-sm-5" id="left">
+          <h3> Player 1 <span id="gameStartPlayer1Name"></span></h3>
+          <div id="play1">
+            <p>Turn Score: <span id="stats-turn-score1"></span></p>
+            <span id="gameStartPlayer1Name"></span></h3>
+            Total Score: <span id="stats-player-1-total-score"></span>
+          </div>
+          <button id="roll-dice-button1" type="button" name="button">Roll Dice</button>
+          <button id="hold-button1" type="button" name="button">Hold</button>
+        </div>
+
+        <div class="col-sm-5" id="right">
+          <h3> Player 2 <span id="gameStartPlayer2Name"></span></h3>
+          <div id="play2">
+            <p>Turn Score: <span id="stats-turn-score2"></span></p>
+            <span id="gameStartPlayer1Name"></span></h3>
+            Total Score: <span id="stats-player-2-total-score"></span>
+          </div>
+          <button id="roll-dice-button2" type="button" name="button">Roll Dice</button>
+          <button id="hold-button2" type="button" name="button">Hold</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <button id="show-stats">
+    Show stats:
+  </button>
+  <div id="game-stats-container"> Show Stats In here </div> -->
+
+</body>
+
 </html>
