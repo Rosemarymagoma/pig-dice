@@ -12,31 +12,34 @@
 
         <h1><strong>PIG DICE</strong></h1><br>
         <div class="played">
-        <button class="btn btn-info" name="button">play</button>
-      </div>
-          <div class="row">
-            <div class="col-md-4">
+          <button class="btn btn-info" name="button">play</button>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <div id="playerOne">
               <div class="form-group">
                 <div class="player-name" id="nameOne"><h3>Player1</h3></div><br>
                 <label for="scoreOne">score</label>
                 <input id="scoreOne" class="form-control" type="text"><br><br>
                 <button class="btn btn-success" name="button">Current 0</button>
               </div>
-          </div><br><br>
-
-          <div class="col-md-4">
-            <div class="form-group">
-              <div class="player-name" id="nameOne"><h3>Player2</h3></div>
-              <label for="scoreOne">score</label>
-              <input id="scoreOne" class="form-control" type="text"><br><br>
-              <button class="btn btn-success" name="button">Current 0</button>
             </div>
-
+          </div><br><br>
+          <div id="playerTwo">
+            <div class="col-md-6">
+              <div class="form-group">
+                <div class="player-name" id="nameOne"><h3>Player2</h3></div>
+                <label for="scoreOne">score</label>
+                <input id="scoreOne" class="form-control" type="text"><br><br>
+                <button class="btn btn-success" name="button">Current 0</button>
+            </div>
           </div>
-
         </div>
+        </div>
+        <div id="twoButtons">
         <button class="btn btn-warning" name="button">Roll Dice</button>
         <button class="btn btn-danger" name="button">Hold</button>
+      </div>
 
 
 

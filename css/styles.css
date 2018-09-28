@@ -8,3 +8,15 @@ h1{
   background-color: thistle;
   col
 }
+.played{
+  text-align: center;
+}
+#playerOne{
+  text-align: left;
+}
+#playerTwo{
+  text-align: left;
+}
+#twoButtons{
+  text-align: center;
+}
