@@ -11,34 +11,46 @@
     <div class="container">
 
         <h1><strong>PIG DICE</strong></h1><br>
+        <h4>First player name</h4>
+        <div class="form-group">
+          <div class="first-player-name">
+            <label for="first-player-name"></label>
+            <input id="firstPlayer" name="form-control" type="text">
+          </div>
+        </div>
+
         <div class="played">
           <button class="btn btn-info" name="button">play</button>
         </div>
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-4">
             <div id="playerOne">
               <div class="form-group">
                 <div class="player-name" id="nameOne"><h3>Player1</h3></div><br>
                 <label for="scoreOne">score</label>
-                <input id="scoreOne" class="form-control" type="text"><br><br>
+                <input id="scoreOne" class="form-control" value="text"><br><br>
                 <button class="btn btn-success" name="button">Current 0</button>
+                <button class="btn btn-warning" name="button">Roll Dice</button>
+                <button class="btn btn-danger" name="button">Hold</button>
               </div>
             </div>
           </div><br><br>
-          <div id="playerTwo">
-            <div class="col-md-6">
+
+            <div class="col-md-4">
+              <div id="playerTwo">
               <div class="form-group">
                 <div class="player-name" id="nameOne"><h3>Player2</h3></div>
                 <label for="scoreOne">score</label>
                 <input id="scoreOne" class="form-control" type="text"><br><br>
                 <button class="btn btn-success" name="button">Current 0</button>
+                <button class="btn btn-warning" name="button">Roll Dice</button>
+                <button class="btn btn-danger" name="button">Hold</button>
             </div>
           </div>
         </div>
         </div>
         <div id="twoButtons">
-        <button class="btn btn-warning" name="button">Roll Dice</button>
-        <button class="btn btn-danger" name="button">Hold</button>
+
       </div>
 
 
