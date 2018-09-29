@@ -1,89 +1,87 @@
 <!DOCTYPE
 <html lang="en" dir="ltr">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-<link href="css/styles.css" rel="stylesheet" type="text/css">
-<script src="js/jquery-3.3.1.js"></script>
-<script src="js/scripts.js"></script>
-<link href="https://fonts.googleapis.com/css?family=Acme|Arima+Madurai:700|Francois+One|Oleo+Script:700|Rasa:300" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Acme|Arima+Madurai:700|Emblema+One|Francois+One|Oleo+Script:700|Rasa:300" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Acme|Arima+Madurai:700|Baloo+Thambi|Emblema+One|Francois+One|Oleo+Script:700|Rasa:300" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Acme|Arima+Madurai:700|Baloo+Thambi|Emblema+One|Francois+One|Nova+Slim|Oleo+Script:700|Rasa:300" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <head>
+      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+      <link href="css/styles.css" rel="stylesheet" type="text/css">
+      <script src="js/jquery-3.3.1.js"></script>
+      <script src="js/scripts.js"></script>
 
-<title>pig-dice</title>
+      <title>pig-dice</title>
 
-</head>
+    </head>
 
-<body>
-  <div class="container">
-    <div class="container-fluid">
-      <div class="menutop" id="rules">
-        <div class="menutop-content">
-          <button id="button" name="button">Rules</button>
-          <div class="rule">
-            <h4>Rules/ How To Play</h4>
-            <p>* Enter the names of the players and submit.</p>
-            <p>* Roll the dice as many times as you want to but do so at your own risk. If you roll a 1,then no points are accumulated in that particular round and your turn is over</p>
-            <p>* If you hold before rolling a 1,the points accumulated within that round are tallied and added to your score.</p>
-            <p>* Reach 100 points before your opponent and be declared the winner.</p>
+    <body>
+      <div class="container">
+        <div class="container-fluid">
+          <div class="menutop" id="rules">
+            <div class="menutop-content">
+              <button id="button" name="button">Rules</button>
+              <div class="rule">
+                <h4>Rules/ How To Play</h4>
+                <p>* Enter the names of the players and submit.</p>
+                <p>* Roll the dice as many times as you want to but do so at your own risk. If you roll a 1,then no points are accumulated in that particular round and your turn is over</p>
+                <p>* If you hold before rolling a 1,the points accumulated within that round are tallied and added to your score.</p>
+                <p>* Reach 100 points before your opponent and be declared the winner.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-12 title">
+            <h1><em>PIG DICE</em></h1>
+          </div>
+        </div>
+        <div class="container" id="player-names-container">
+          <form id="playerinfo">
+            <div class="form-group">
+              <label for="first-player">First Player Name</label>
+              <input type="text" id="firstPlayerName" class="form-control player-1">
+            </div><br><br>
+            <div class="form-group">
+              <label for="second-player">Second Player Name</label>
+              <input type="text" id="secondPlayerName" class="form-control player-2">
+            </div><br><br>
+            <button type="button" id="start-game-button" name="button">Start Game</button>
+          </form>
+        </div>
+
+    <!-- game container -->
+
+      <div class="container" id="game-container">
+        <div class="row">
+          <div class="col-sm-5" id="left">
+            <h3> Player 1 <span id="gameStartFirstPlayerName"></span></h3>
+            <div id="firstPlay"><br><br>
+              <p>Turn Score: <span id="stats-turn-score1"></span></p>
+              <span id="gameStartFirstPlayerName"></span></h3><br><br>
+              Total Score: <span id="stats-first-player-total-score"></span>
+            </div><br><br>
+            <button id="roll-dice-button1" type="button" name="button">Roll Dice</button>
+            <button id="hold-button1" type="button" name="button">Hold</button>
+          </div>
+          `
+
+          <div class="col-sm-5" id="right">
+            <h3> Player 2 <span id="gameSecondStartPlayerName"></span></h3>
+            <div id="secondPlay"><br><br>
+              <p>Turn Score: <span id="stats-turn-score2"></span></p>
+              <span id="gameStartFirstPlayerName"></span></h3><br><br>
+              Total Score: <span id="stats-second-player-total-score"></span>
+            </div><br><br>
+            <button id="roll-dice-button2" type="button" name="button">Roll Dice</button>
+            <button id="hold-button2" type="button" name="button">Hold</button>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="row">
-      <div class="col-sm-12 title">
-        <h1><em>Pig Dice</em></h1>
-      </div>
-    </div>
-    <div class="container" id="player-names-container">
-      <form id="playerinfo">
-        <div class="form-group">
-          <label for="player-1">First Player Name</label>
-          <input type="text" id="player1Name" class="form-control player-1">
-        </div><br><br>
-        <div class="form-group">
-          <label for="player-2">Second Player Name</label>
-          <input type="text" id="player2Name" class="form-control player-2">
-        </div><br><br>
-        <button type="button" id="start-game-button" name="button">Start Game</button>
-      </form>
-    </div>
-
-    <!-- game container -->
-
-    <div class="container" id="game-container">
-      <div class="row">
-        <div class="col-sm-5" id="left">
-          <h3> Player 1 <span id="gameStartPlayer1Name"></span></h3>
-          <div id="play1"><br><br>
-            <p>Turn Score: <span id="stats-turn-score1"></span></p>
-            <span id="gameStartPlayer1Name"></span></h3><br><br>
-            Total Score: <span id="stats-player-1-total-score"></span>
-          </div><br><br>
-          <button id="roll-dice-button1" type="button" name="button">Roll Dice</button>
-          <button id="hold-button1" type="button" name="button">Hold</button>
-        </div>
-
-        <div class="col-sm-5" id="right">
-          <h3> Player 2 <span id="gameStartPlayer2Name"></span></h3>
-          <div id="play2"><br><br>
-            <p>Turn Score: <span id="stats-turn-score2"></span></p>
-            <span id="gameStartPlayer1Name"></span></h3><br><br>
-            Total Score: <span id="stats-player-2-total-score"></span>
-          </div><br><br>
-          <button id="roll-dice-button2" type="button" name="button">Roll Dice</button>
-          <button id="hold-button2" type="button" name="button">Hold</button>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <!-- <button id="show-stats">
     Show stats:
   </button>
   <div id="game-stats-container"> Show Stats In here </div> -->
 
-</body>
+  </body>
 
 </html>
