@@ -31,55 +31,55 @@ $(document).ready(function() {
     $("#gameStartFirstPlayerName").text(firstPlayer);
     $("#gameStartSecondPlayerName").text(secondPlayer);
 
-    first-player-stats = new gameplayer();
-    second-player-stats = new gameplayer();
+    firstPlayerStats = new gameplayer();
+    secondPlayerStats = new gameplayer();
 
   });
   //player1roll
   $("#roll-dice-button1").click(function() {
-    var rolled = first-player-stats.roll();
-    first-player-stats.turnScore += rolled;
+    var rolled = firstPlayerStats.roll();
+    firstPlayerStats.turnScore += rolled;
     if (rolled == 1) {
-      first-player-stats.turnScore = 0;
-      $("#stats-turn-score1").text(first-player-stats.turnScore);
+      firstPlayerStats.turnScore = 0;
+      $("#stats-turn-score1").text(firstPlayerStats.turnScore);
       $("#firstPlay").hide()
       $("#play").show()
 
     }
 
-    $("#stats-turn-score1").text(first-player-stats.turnScore);
-    $("#stats-first-player-total-score1").text(second-player-stats.totalScore);
+    $("#stats-turn-score1").text(firstPlayerStats.turnScore);
+    $("#stats-first-player-total-score1").text(secondPlayerStats.totalScore);
 
   });
   $("#hold-button1").click(function() {
-    first-player-stats.totalScore += first-player-stats.turnScore;
-    first-player-stats.turnScore = 0;
-    $("#stats-first-player-total-score").text(first-player-stats.totalScore);
-    $("#stats-turn-score1").text(first-player-stats.turnScore);
+    firstPlayerStats.totalScore += firstPlayerStats.turnScore;
+    firstPlayerStats.turnScore = 0;
+    $("#stats-first-player-total-score").text(firstPlayerStats.totalScore);
+    $("#stats-turn-score1").text(firstPlayerStats.turnScore);
     $("#firstPlay").hide()
     $("#secondPlay").show()
 
   });
-  //player2 roll
+  //player2
   $("#roll-dice-button2").click(function() {
-    var rolled = second-player-stats.roll();
-    second-player-stats.turnScore += rolled;
+    var rolled = secondPlayerStats.roll();
+    secondPlayerStats.turnScore += rolled;
     if (rolled == 1) {
-      second-player-stats.turnScore = 0;
-      $("#stats-turn-score2").text(second-player-stats.turnScore);
+    secondPlayerStats.turnScore = 0;
+      $("#stats-turn-score2").text(secondPlayerStats.turnScore);
       $("#secondPlay").hide()
       $("#firstPlay").show()
 
     }
 
-    $("#stats-turn-score2").text(second-player-stats.turnScore);
+    $("#stats-turn-score2").text(secondPlayerStats.turnScore);
 
   });
   $("#hold-button2").click(function() {
-    second-player-stats.totalScore += second-player-stats.turnScore;
-    player-stats.turnScore = 0;
-    $("#stats-first-player-total-score").text(second-player-stats.totalScore);
-    $("#stats-turn-score2").text(second-player-stats.turnScore);
+    secondPlayerStats.totalScore +=secondPlayerStatss.turnScore;
+    secondPlayerStats.turnScore = 0;
+    $("#stats-first-player-total-score").text(secondPlayerStats.totalScore);
+    $("#stats-turn-score2").text(secondPlayerStats.turnScore);
     $("#firstPlay").hide()
     $("#secondPlay").show()
   });

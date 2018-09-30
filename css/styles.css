@@ -1,4 +1,4 @@
-h1{
+/*h1{
   text-align: center;
   font-family:  fantasy;
   color: darkseagreen;
@@ -27,4 +27,116 @@ h1{
 }
 .player-console{
   display: none;
+}*/
+body {
+  background-image: url('../img/bg.jpg');
+}
+
+label {
+  color: #2fbaf9;
+  font-size: 25px;
+  font-family: 'Oleo Script', cursive;
+}
+
+h4 {
+  color: #d6ff4f;
+  text-decoration: underline;
+}
+
+h1 {
+  float: right;
+  color: #d6ff4f;
+  font-family: 'Emblema One', cursive;
+  font-size: 85px;
+}
+
+#game-container {}
+
+#rules {
+  color: #2fbaf9;
+}
+
+.title {
+  font-family: 'Emblema One', cursive;
+  font-size: 85px;
+}
+
+body {
+  background-image: url('../img/bg.jpg');
+}
+
+label {
+  color: #2fbaf9;
+  font-size: 25px;
+  font-family: 'Oleo Script', cursive;
+}
+
+h4 {
+  color: #d6ff4f;
+  text-decoration: underline;
+}
+
+h1 {
+  float: right;
+  color: #d6ff4f;
+  font-family: 'Emblema One', cursive;
+  font-size: 85px;
+}
+
+#game-container {}
+
+#rules {
+  color: #2fbaf9;
+}
+
+.title {
+  font-family: 'Emblema One', cursive;
+  font-size: 85px;
+}
+
+/* buttons */
+
+#roll-dice-button1 {
+  margin-top: 50%;
+}
+
+#roll-dice-button2 {
+  margin-top: 50%;
+}
+
+#player-names-container {
+  width: 700px;
+  margin-top: 15%;
+}
+
+#game-container {
+  margin-bottom: 15%;
+}
+
+/* columns */
+
+#left {
+  background-color: #2fbaf9;
+  height: 400px;
+}
+
+#right {
+  background-color: #d6ff4f;
+  height: 400px;
+}
+
+#left h3 {
+  font-family: 'Nova Slim', cursive;
+}
+
+#right h3 {
+  font-family: 'Nova Slim', cursive;
+}
+
+#play1 {
+  font-family: 'Baloo Thambi', cursive;
+}
+
+#play2 {
+  font-family: 'Baloo Thambi', cursive;
 }
