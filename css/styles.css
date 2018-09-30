@@ -2,7 +2,7 @@
 .container {
   background-color: moccasin;
   color: midnightblue;
-  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTREhKF2yVfIRvrDiS51YfMWyN1AWx1PLDccNNts1NPuj6tQV5Uqg');
+  background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2MK1faMg_bprxfFWD3-hwXXR3BIMESBXe0XpUNtZLUbFe76W9');
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -18,31 +18,30 @@ label {
   font-family: 'Oleo Script', cursive;
 }
 
-h4 {
-  color: #d6ff4f;
-  text-decoration: underline;
-}
+
 
 h1 {
   float: right;
   color: #d6ff4f;
   font-family: 'Emblema One', cursive;
-  font-size: 85px;
+  font-size: 96px;
 }
-
-
 
 body {
   background-image: url('../img/bg.jpg');
 }
 
-label {
-  color: #2fbaf9;
-  font-size: 25px;
-  font-family: 'Oleo Script', cursive;
-}
-
 h4 {
   color: #d6ff4f;
   text-decoration: underline;
+  font-weight: bold;
+  font-size: 53px;
+  font-family: serif;
+
+}
+
+label {
+  color: #2fbaf9;
+  font-size: 45px;
+  font-family: 'Oleo Script', cursive;
 }

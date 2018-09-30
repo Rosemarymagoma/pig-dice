@@ -73,7 +73,6 @@ $(document).ready(function() {
     }
 
     $("#stats-turn-score2").text(secondPlayerStats.turnScore);
-    $("#stats-second-player-total-score1").text(secondPlayerStats.totalScore);
 
 
   });
@@ -83,7 +82,7 @@ $(document).ready(function() {
     $("#stats-first-player-total-score").text(secondPlayerStats.totalScore);
     $("#stats-turn-score2").text(secondPlayerStats.turnScore);
     $("#firstPlay").hide()
-    $("#Play").show()
+    $("#secondPlay").show()
   });
 
 
