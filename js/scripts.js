@@ -48,7 +48,7 @@ $(document).ready(function() {
     }
 
     $("#stats-turn-score1").text(firstPlayerStats.turnScore);
-    $("#stats-first-player-total-score1").text(secondPlayerStats.totalScore);
+    $("#stats-first-player-total-score1").text(firstPlayerStats.totalScore);
 
   });
   $("#hold-button1").click(function() {
@@ -60,7 +60,7 @@ $(document).ready(function() {
     $("#secondPlay").show()
 
   });
-  //player2
+  //player2roll
   $("#roll-dice-button2").click(function() {
     var rolled = secondPlayerStats.roll();
     secondPlayerStats.turnScore += rolled;
@@ -68,20 +68,22 @@ $(document).ready(function() {
     secondPlayerStats.turnScore = 0;
       $("#stats-turn-score2").text(secondPlayerStats.turnScore);
       $("#secondPlay").hide()
-      $("#firstPlay").show()
+      $("#Play").show()
 
     }
 
     $("#stats-turn-score2").text(secondPlayerStats.turnScore);
+    $("#stats-second-player-total-score1").text(secondPlayerStats.totalScore);
+
 
   });
   $("#hold-button2").click(function() {
-    secondPlayerStats.totalScore +=secondPlayerStatss.turnScore;
+    secondPlayerStats.totalScore +=secondPlayerStats.turnScore;
     secondPlayerStats.turnScore = 0;
     $("#stats-first-player-total-score").text(secondPlayerStats.totalScore);
     $("#stats-turn-score2").text(secondPlayerStats.turnScore);
     $("#firstPlay").hide()
-    $("#secondPlay").show()
+    $("#Play").show()
   });
 
 
