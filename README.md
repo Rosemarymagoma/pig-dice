@@ -16,3 +16,12 @@
 
 ### Project setup and instructions
 * Clone my repository to your own repository.Then install it.
+
+### Link to l
+
+
+### License
+
+
+### Copyright
+* Rosemary Magoma
