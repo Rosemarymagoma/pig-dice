@@ -68,7 +68,7 @@ $(document).ready(function() {
     secondPlayerStats.turnScore = 0;
       $("#stats-turn-score2").text(secondPlayerStats.turnScore);
       $("#secondPlay").hide()
-      $("#Play").show()
+      $("#firstPlay").show()
 
     }
 
@@ -81,8 +81,8 @@ $(document).ready(function() {
     secondPlayerStats.turnScore = 0;
     $("#stats-first-player-total-score").text(secondPlayerStats.totalScore);
     $("#stats-turn-score2").text(secondPlayerStats.turnScore);
-    $("#firstPlay").hide()
-    $("#secondPlay").show()
+    $("#secondPlay").hide()
+    $("#firstPlay").show()
   });
 
 
