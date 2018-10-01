@@ -25,10 +25,15 @@ h1 {
   color: #d6ff4f;
   font-family: 'Emblema One', cursive;
   font-size: 96px;
+  text-decoration: underline;
+  font-weight: bolder;
 }
 
 body {
-  background-image: url('../img/bg.jpg');
+  font-weight: bold;
+  font-size: 26px;
+  font-style: oblique;
+  font-family:monospace;
 }
 
 h4 {
@@ -42,6 +47,12 @@ h4 {
 
 label {
   color: #2fbaf9;
-  font-size: 45px;
+  font-size: 35px;
   font-family: 'Oleo Script', cursive;
+}
+h3 {
+  color:  #2fbaf9;
+  text-decoration: overline;
+  font-size: 32px;
+  font-weight: bold;
 }
