@@ -17,6 +17,7 @@ $(document).ready(function() {
   });
   $("#game-container").hide();
 
+  $("#game-level-button").click(function(event) {
   $("#start-game-button").click(function(event) {
     event.preventDefault();
 
@@ -35,6 +36,7 @@ $(document).ready(function() {
     secondPlayerStats = new gameplayer();
 
   });
+});
   //player1roll
   $("#roll-dice-button1").click(function() {
     var rolled = firstPlayerStats.roll();
