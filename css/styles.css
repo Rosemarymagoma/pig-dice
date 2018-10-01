@@ -8,10 +8,6 @@
 }
 
 
-body {
-  background-image: url('');
-}
-
 label {
   color: #2fbaf9;
   font-size: 25px;
@@ -55,4 +51,10 @@ h3 {
   text-decoration: overline;
   font-size: 32px;
   font-weight: bold;
+}
+button {
+  color: midnightblue;
+  background-color: #d6ff4f;
+  font-weight: bold; 
+
 }
