@@ -6,6 +6,9 @@
 ### Description
 * The game its played by two players starting with entering their names wherever necessary.The first player rolls the dice as many times as possible then holds then the player gets his or her total score.The second player picks up from their.The one who is able to reach a total score of 100points is declared a winner. The application is meant to help the programming students practise how to play with various lines of code to come up with a product.
 
+### Link my live github
+* [link](https://rosemarymagoma.github.io/pig-dice/)
+
 ### Prerequisites
 * jQuery
 * atom
@@ -36,8 +39,7 @@
 * Find the lisence to my application [here](https://choosealicense.com/licenses/mit/)
 * This application is under the MIT License.
 
-### Link my live github
-* [link](https://github.com/Rosemarymagoma/pig-dice)
+
 
 ### Copyright
 ### (C)
