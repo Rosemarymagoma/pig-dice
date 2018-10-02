@@ -8,11 +8,12 @@
 
 ### Prerequisites
 * jQuery
-* atom 
+* atom
 * git
-* bootstrap
-* css
+* Bootstrap
+* CSS
 * HTML
+* Javascript
 
 ### Contributors
 * Rosemary Magoma
